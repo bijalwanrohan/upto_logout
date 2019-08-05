@@ -1,0 +1,18 @@
+<DOCTYPE html>
+{% extends 'fun7app/base.html' %}
+{% load staticfiles %}
+
+{% block bodyblock %}
+
+<div class="jumbotron">
+  <h1>PLEASE LOGIN</h1>
+  <form method="POST">
+    {%csrf_token%}
+    <label for="username">Username:</label>
+    <input id='username' type="text" name="user_name" placeholder="enter username">
+    <label for="password">Password:</label>
+    <input id='password' type="password" name="pass_word" value="">
+    <input type="submit" name="" value="LOGIN!!">
+  </form>
+</div>
+{% endblock %}
